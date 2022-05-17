@@ -1,0 +1,36 @@
+{
+	"editor.renderWhitespace": "none",
+	"editor.formatOnSave": true,
+	"eslint.enable": true,
+	"eslint.run": "onSave",
+	"javascript.suggestionActions.enabled": false,
+	"yaml.format.enable": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[feature]": {
+		"editor.defaultFormatter": "alexkrechik.cucumberautocomplete"
+	},
+	"[pug]": {
+		"editor.defaultFormatter": "mrmlnc.vscode-pugbeautify"
+	},
+	"[js]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "ecmel.vscode-html-css"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "ecmel.vscode-html-css"
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "ecmel.vscode-html-css"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[yml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	}
+}
