@@ -1,8 +1,7 @@
 {
-	"name": "nodejsexpressapp",
+	"name": "tokra-nodejs-express-app",
 	"version": "1.0.0",
-	"description": "Start building your next Node.js Express app on IBM Cloud.",
-	"private": true,
+	"description": "tokra-nodejs-express-app starter",
 	"engines": {
 		"node": "^16.0.0"
 	},
@@ -61,5 +60,6 @@
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-jest": "^22.7.1",
 		"eslint-plugin-prettier": "^3.3.1"
-	}
+	},
+	"license": "Apache-2.0"
 }
