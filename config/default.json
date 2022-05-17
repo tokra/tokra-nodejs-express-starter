@@ -1,0 +1,78 @@
+{
+	"env": {
+		"NEW_RELIC_DISTRIBUTED_TRACING_ENABLED": false
+	},
+	"http": {
+		"port": 8082,
+		"hostname": "localhost"
+	},
+	"cluster": {
+		"workersCount": 4,
+		"enabled": false
+	},
+	"express": {
+		"routes": {
+			"path": {
+				"v1": "/api/v1",
+				"v2": "/api/v2"
+			}
+		},
+		"jsonpOptions": {
+			"contentDisposition": ["attachment; filename=result.txt"],
+			"contentType": "text/javascript; charset=utf-8"
+		},
+		"request": {
+			"sizeLimit": "1mb"
+		},
+		"ping": {
+			"statusMessage": "OK"
+		}
+	},
+	"fetch": {
+		"userAgent": "UA/tokra.io"
+	},
+	"corsOptions": {
+		"origin": "*",
+		"optionsSuccessStatus": 200,
+		"methods": ["GET", "POST", "OPTIONS"],
+		"allowedHeaders": ["Origin", "X-Requested-With", "Content-Type", "Accept", "Cache-Control"]
+	},
+	"logging": {
+		"level": "debug",
+		"dir": "./logs",
+		"logentriesToken": "",
+		"logentriesEnabled": "",
+		"geoRegion": "",
+		"categories": {
+			"app": ["Console"],
+			"api": ["Console"],
+			"test:integration": ["Console"],
+			"performance": ["Console"]
+		},
+		"trace": {
+			"region": true,
+			"origin": true,
+			"referer": true,
+			"remoteClientIP": true,
+			"userAgent": true,
+			"enabledTokens": "hostname,geoRegion,reqMethod,respStatus,respTime,contentLength,reqOrigin,reqReferrer,reqIp,reqUa,reqId,reqUrl,appId",
+			"tokensFormat": "${name}[${value}]"
+		},
+		"akamaiLoggingEnabled": ""
+	},
+	"components": {
+		"limits": {
+			"queryMaxLength": 128
+		}
+	},
+	"cucumber": {
+		"defaultTimeout": 5000
+	},
+	"tests": {
+		"jestTimeout": 5000
+	},
+	"rateLimit": {
+		"windowMs": 60000,
+		"maxQuery": 2500
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"http": {
+		"port": "APP_PORT"
+	},
+	"cluster": {
+		"workersCount": "APP_CLUSTERING_APP_INSTANCES_COUNT",
+		"enabled": "APP_CLUSTERING_ENABLED"
+	},
+	"express": {},
+	"fetch": {
+		"userAgent": "APP_USER_AGENT"
+	},
+	"logging": {
+		"logentriesToken": "APP_LOGENTRIES_TOKEN",
+		"logentriesEnabled": "APP_LOGENTRIES_ENABLED",
+		"geoRegion": "APP_LOGGING_GEO_REGION",
+		"trace": {
+			"region": "APP_LOGGING_TRACE_REGION_ENABLED",
+			"origin": "APP_LOGGING_TRACE_ORIGIN_ENABLED",
+			"referer": "APP_LOGGING_TRACE_REFERER_ENABLED",
+			"remoteClientIP": "APP_LOGGING_TRACE_REMOTE_CLIENT_IP_ENABLED",
+			"userAgent": "APP_LOGGING_TRACE_USER_AGENT_ENABLED"
+		},
+		"akamaiLoggingEnabled": "APP_LOGGING_AKAMAI_LOG_ENABLED"
+	},
+	"env": {
+		"NODE_TLS_REJECT_UNAUTHORIZED": "APP_ENV_NODE_TLS_REJECT_UNAUTHORIZED",
+		"NEW_RELIC_DISTRIBUTED_TRACING_ENABLED": "APP_NEW_RELIC_DISTRIBUTED_TRACING_ENABLED"
+	},
+	"components": {
+		"limits": {
+			"queryMaxLength": "APP_LIMIT_QUERY_MAX_LENGTH"
+		}
+	},
+	"cucumber": {
+		"defaultTimeout": "APP_CUCUMBER_DEFAULT_TIMEOUT"
+	},
+	"tests": {
+		"jestTimeout": "APP_TESTS_JEST_TIMEOUT"
+	},
+	"rateLimit": {
+		"windowMs": "APP_RATE_LIMIT_DELAY_MILLISECONDS",
+		"maxQuery": "APP_RATE_LIMIT_MAX"
+	}
+}

@@ -11,8 +11,16 @@ import swaggerRoutes from './routes/swagger-route.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const _ = require('lodash');
+const logger = require('./modules/loggingConfigurator').getLogger('app');
 
 const app = express();
+
+/* istanbul ignore if */
+if (_.isEqual(_.toString(process.env.NEW_RELIC_ENABLED), 'true')) {
+	require('newrelic');
+	logger.info('[NEWRELIC] NewRelic agent started ...');
+}
 
 // if production, enable helmet
 /* c8 ignore next 3  */
