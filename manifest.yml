@@ -1,0 +1,13 @@
+---
+applications:
+- instances: 3
+  timeout: 180
+  name: tokranodejsexpressapp
+  buildpack: nodejs_buildpack
+  command: npm start
+  disk_quota: 1G
+  memory: 256MB
+  domain: mybluemix.net
+  host: tokra-nodejs-express-app
+  env:
+    OPTIMIZE_MEMORY: true
